@@ -1,11 +1,20 @@
 import { Injectable } from "@nestjs/common";
 import { appendFile } from "node:fs/promises";
-import { ILoggerService, LogPath } from "./Logger.interface";
 
 const emailsLogPath = require('path').join(__dirname, '..', '..', 'test', 'emails.txt');
 const smsLogPath = require('path').join(__dirname, '..', '..', 'logs', 'sms.txt');
 const errorsLogPath =  require('path').join(__dirname, '..', '..', 'logs', 'errors.txt');
 const newLineChar = process.platform === 'win32' ? '\r\n' : '\n';
+
+interface ILoggerService {
+    senderEmail(data: string): void;
+    smsGateway(data: string): void;
+}
+
+enum LogPath {
+    emails = 'emails',
+    sms = 'sms',
+}
 
 @Injectable()
 export class LoggerService implements ILoggerService {
