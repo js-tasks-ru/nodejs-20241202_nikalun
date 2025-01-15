@@ -34,7 +34,7 @@ export class TasksService {
   async updateTask(id: string, updateTaskDto: UpdateTaskDto) {
     const task = this.tasks.find((t) => t.id === id);
     if (!task) {
-
+      
       throw new NotFoundException(`Задача с ID ${id} не найдена`);
     }
     const { phone } = this._userService.getUserById(task.assignedTo);
