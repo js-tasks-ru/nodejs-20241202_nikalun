@@ -1,0 +1,1 @@
+Error: ENOENT: no such file or directory, open '/Users/nikolaylukinnych/Documents/nodejs-20241202_nikalun/03-di/01-notification-service/test/emails.txt'
