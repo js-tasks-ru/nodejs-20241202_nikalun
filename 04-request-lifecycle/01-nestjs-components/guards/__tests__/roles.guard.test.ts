@@ -73,7 +73,6 @@ describe("RolesGuard", () => {
     });
   });
 
-
   it("should allow access for POST request if role is admin", async () => {
     const response = await request(app.getHttpServer())
       .post("/mock")
@@ -82,7 +81,6 @@ describe("RolesGuard", () => {
 
     expect(response.body).toEqual({ message: "POST request successful" });
   });
-
 
   it("should allow access for POST request jwt token contains role", async () => {
     const response = await request(app.getHttpServer())
