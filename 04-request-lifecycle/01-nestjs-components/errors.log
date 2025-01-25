@@ -2,3 +2,5 @@
 [.*] 500 - Task with ID "3" not found
 [.*] 500 - Task with ID "1" not found
 [.*] 500 - Доступ запрещён: требуется роль admin
+[.*] 500 - Mock error for testing
+[.*] 500 - Mock error for testing
