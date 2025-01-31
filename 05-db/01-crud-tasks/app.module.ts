@@ -9,7 +9,7 @@ import { Task } from "./tasks/entities/task.entity";
       type: "sqlite",
       database: 'db.sqlite',
       entities: [Task],
-      //synchronize: true,
+      synchronize: true,
     }),
     TasksModule],
 })
